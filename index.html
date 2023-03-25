@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Example</title>
+  </head>
+  <body>
+    <div>
+      <label for="textInput"></label>
+      <textarea id="textInput" rows="20" cols="100"></textarea>
+    </div>
+    <button id="replaceBtn">Modify Lyrics</button>
+    <div>
+      <h2>Output:</h2>
+      <pre id="output"></pre>
+    </div>
+    <script>
+      const textInput = document.getElementById("textInput");
+      const output = document.getElementById("output");
+      const replaceBtn = document.getElementById("replaceBtn");
+
+      replaceBtn.addEventListener("click", function () {
+        let text = textInput.value;
+        const lines = text.split("\n");
+        const modifiedLines = [];
+        const originalLines = [];
+
+        for (let i = 0; i < lines.length; i++) {
+          const modifiedLine = lines[i]
+            .replace(/you/g, "yOh")
+            .replace(/You/g, "yOh")
+            .replace(/i /g, "oLng")
+            .replace(/I /g, "oLng")
+            .replace(/ell/g, "ayLL")
+            .replace(/oo/g, "ay")
+            .replace(/in/g, "ayN")
+            .replace(/any/g, "yayNayoo")
+            .replace(/ish/g, "ayZsh")
+            .replace(/perfect/g, "pAyrFaykt")
+            .replace(/he/g, "hayoo")
+            .replace(/He/g, "hayoo")
+            .replace(/cal/g, "goaL")
+            .replace(/Cal/g, "goaL")
+            .replace(/wel/g, "way")
+            .replace(/Wel/g, "way")
+            .replace(/ee/g, "ay-oo")
+            .replace(/me/g, "May-oo")
+            .replace(/Me/g, "May-oo")
+            .replace(/marr/g, "MayR")
+            .replace(/Marr/g, "MayR")
+
+            .replace(/have/g, "hoave")
+            .replace(/year/g, "yayooR")
+            .replace(/here/g, "hayOoR")
+            .replace(/yea/g, "yay")
+            .replace(/tom/g, "daym")
+            .replace(/t/g, "d")
+            .replace(/p/g, "b")
+            .replace(/wish/g, "waysh")
+            .replace(/at/g, "oat")
+            .replace(/future/g, "vyoture")
+            .replace(/f/g, "v")
+            .replace(/ea/g, "ayoo")
+            .replace(/ere/g, "ayoor")
+            .replace(/such/g, "soyj")
+            .replace(/lovely/g, "LoyLayoo")
+            .replace(/ly/g, "Layoo")
+            .replace(/um/g, "oyM")
+            .replace(/ome/g, "oyM")
+            .replace(/arm/g, "oLng")
+            .replace(/on/g, "olng")
+            .replace(/On/g, "olng")
+            .replace(/dark/g, "DaylngRk")
+            .replace(/om/g, "aylngM")
+            .replace(/high/g, "hOLNg")
+            .replace(/sky/g, "sGoLNg")
+            .replace(/lord/g, "LoLNgrd")
+            .replace(/on't/g, "oLNd")
+            .replace(/j/g, "shCh")
+            .replace(/J/g, "shCh")
+            .replace(/were/g, "wAyR")
+            .replace(/workin/g, "wAyrgN")
+            .replace(/t/g, "d")
+            .replace(/des/g, "dayz")
+            .replace(/Des/g, "dayz")
+            .replace(/T/g, "D")
+            .replace(/s/g, "z")
+            .replace(/S/g, "z")
+            .replace(/i/g, "ay")
+            .replace(/er/g, "ayR")
+            .replace(/ay/g, "uhL")
+            .replace(/good/g, "goyd")
+            .replace(/my/g, "muhL")
+            .replace(/My/g, "muhL")
+            .replace(/ca/g, "guh")
+            .replace(/cu/g, "guh")
+            .replace(/Cu/g, "guh")
+            .replace(/dhe/g, "thoy")
+            .replace(/rew/g, "rAyw")
+            .replace(/and/g, "oave")
+            .replace(/And/g, "oave")
+            .replace(/uch/g, "oygch")
+            .replace(/lendy/g, "loondoo")
+            .replace(/any/g, "oon-oo")
+            .replace(/p/g, "b")
+            .replace(/P/g, "b")
+            .replace(/ow/g, "ayW")
+            .replace(/ow/g, "ayW")
+            .replace(/'c/g, "'g")
+            .replace(/'C/g, "'g")
+            .replace(/ove/g, "oLng")
+            .replace(/hezz/g, "hayz")
+
+            .replace(/baby/g, "boob")
+            .replace(/Baby/g, "boob");
+          modifiedLines.push(modifiedLine);
+          originalLines.push(lines[i]);
+        }
+
+        let result = "";
+        for (let i = 0; i < modifiedLines.length; i++) {
+          result += modifiedLines[i] + ": " + originalLines[i] + "\n";
+        }
+
+        output.textContent = result;
+      });
+    </script>
+  </body>
+</html>
+
+<!--
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>new vowel Replacer</title>
+  </head>
+  <body>
+    <textarea id="textInput" rows="30" cols="80"></textarea>
+    <br />
+    <button id="replaceBtn">
+      Replace and view your new and imporoved lyrics below!
+    </button>
+    <br />
+    <br />
+    <textarea id="output" rows="50" cols="80" readonly></textarea>
+    <script src="replace.js"></script>
+  </body>
+</html>
+-->
