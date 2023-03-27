@@ -12,12 +12,12 @@
         body {
           display: flex;
           flex-direction: column;
-          max-width: 130%;
+          max-width: 100%;
         }
         textarea,
         div,
         pre {
-          width: 130%;
+          width: 200%;
           box-sizing: border-box;
         }
       }
@@ -197,7 +197,9 @@
             .replace(/Hang/g, "hooLng")
             .replace(/hang/g, "hooLng")
             .replace(/WannuhL/g, "WoyNuhL")
-            .replace(/wannuhL/g, "WoyNuhL");
+            .replace(/wannuhL/g, "WoyNuhL")
+            .replace(/may/g, "mooL")
+            .replace(/May/g, "mooL");
 
           modifiedLines.push(modifiedLine);
           originalLines.push(lines[i]);
