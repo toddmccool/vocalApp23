@@ -50,6 +50,8 @@
         for (let i = 0; i < lines.length; i++) {
           const modifiedLine = lines[i]
 
+            .replace(/breathin/g, "brayOOthayn")
+            .replace(/breathe/g, "brayOOth")
             .replace(/ooh/g, "uhLay")
             .replace(/at/g, "oad")
             .replace(/car/g, "coaL")
@@ -206,8 +208,8 @@
             .replace(/enc/g, "ayng")
             .replace(/vuh/g, "vooLng")
             .replace(/Vuh/g, "vooLng")
-            .replace(/even/g, "ayvooLng");
-
+            .replace(/even/g, "ayvooLng")
+            .replace(/broken/g, "brohLgayn");
           modifiedLines.push(modifiedLine);
           originalLines.push(lines[i]);
         }
