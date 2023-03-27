@@ -37,8 +37,9 @@
           const modifiedLine = lines[i]
 
             .replace(/ooh/g, "uhLay")
-            .replace(/a /g, "uhLay")
-            .replace(/A /g, "uhLay")
+
+            .replace(/(a) /g, `${1} uhLay`)
+            .replace(/(A) /g, `${1} uhLay`)
             .replace(/though/g, "thuhL")
             .replace(/no/g, "NuhL")
             .replace(/go/g, "GuhL")
@@ -55,8 +56,9 @@
 
             .replace(/you/g, "yOh")
             .replace(/You/g, "yOh")
-            .replace(/i /g, "oLng")
-            .replace(/I /g, "oLng")
+            .replace(/(i) /g, `${1} oLng`)
+            .replace(/(I) /g, `${1} oLng`)
+
             .replace(/ell/g, "uhLayLL")
             .replace(/oo/g, "uhLay")
             .replace(/in/g, "uhLayN")
@@ -74,7 +76,6 @@
             .replace(/Me/g, "MuhLay-oo")
             .replace(/marr/g, "MuhLayR")
             .replace(/Marr/g, "MuhLayR")
-
             .replace(/have/g, "hoave")
             .replace(/year/g, "yuhLayooR")
             .replace(/here/g, "huhLayOoR")
@@ -143,10 +144,8 @@
             .replace(/brzLuhLn/g, "brown")
             .replace(/HzLuhL/g, "huHL")
             .replace(/WhuhLoore/g, "wuh-ayL")
-
             .replace(/dhuhLoo/g, "thuhL")
             .replace(/ord/g, "oLnd")
-
             .replace(/NaMuhL/g, "nooM")
             .replace(/naMuhL/g, "nooM")
             .replace(/God/g, "Guhld")
@@ -159,13 +158,9 @@
             .replace(/f/g, "v")
             .replace(/our/g, "uhL")
             .replace(/Our/g, "uhL")
-
             .replace(/col/g, "guhL")
-
             .replace(/cal/g, "guhL")
-
             .replace(/Col/g, "guhL")
-
             .replace(/Cal/g, "guhL");
 
           modifiedLines.push(modifiedLine);
