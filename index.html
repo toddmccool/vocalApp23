@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>PronounSing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       .highlight {
         background-color: yellow;
       }
 
       .header-bold {
-        font-weight: bold;
+        display: inline-block; 
+        color: rgb(255, 38, 0); 
+        font-size: 15px;
+        font-style: italic;
       }
 
       .header-pfont {
@@ -17,6 +21,11 @@
         color: blue; 
         font-size: 32px;
         font-style: italic;
+      }
+
+      #replaceBtn {
+        background-color: red; 
+        color: white
       }
 
       @media only screen and (max-width: 480px) {
@@ -53,16 +62,16 @@
         and open) area
       </h4>
 
-      <h3>so, to get into Mix Voice instantly, <br>
+      <h3>so, to get into Mix Voice instantly...<br>
     Insert the
-      <span class="header-bold">Challenging Original Line of Lyrics</span> here: </h3>
+      <span class="header-bold">Challenging Original Line of Lyrics</span>  
 
       <br />
 
       <label for="textInput"></label>
-      <textarea id="textInput" rows="10" cols="60"></textarea>
-    </div>
-    <button id="replaceBtn" style="background-color: red; color: white">
+      <textarea id="textInput" rows="10" cols="60" placeholder="HERE!"></textarea>
+    </div></h3>
+    <button id="replaceBtn">
       Mixify dem Lyrics!
     </button>
     <div>
@@ -291,6 +300,7 @@ copperfieldDiv.style.display = 'none';
             
             .replace(/Eye/g, "ohLngz")
             .replace(/eye/g, "ohLngz")
+            .replace(/hy/g, "ohL")
             ;
 
           modifiedLines.push(modifiedLine);
