@@ -15,7 +15,7 @@
       .header-pfont {
         display: inline-block; 
         color: blue; 
-  
+        font-size: 32px;
         font-style: italic;
       }
 
@@ -37,15 +37,15 @@
   </head>
   <body>
     <div>
-      <h4>
+     <div class ="copperfield"> <h4>
         Vowel Modification as everyone I've seen describe it, is not sufficient
         to keep effective resonance in the voice. <br />
-        Vowel modification is not a matter of Narrowing and moving to the vowel
-        of the next formant <br />as every vowel modification chart out there
+        Vowel modification is not a matter of Narrowing & moving to the vowel
+        of the next formant <br />as every <a href="https://www.google.com/search?rlz=1C5CHFA_enUS775US775&sxsrf=APwXEde8hf5R9YK9xajn-TlwyqR8jNAFQg:1679989655615&q=vowel+modification+chart&tbm=isch&source=univ&fir=Gtdz3hV4j3nyCM%252C0asx8UucVob8QM%252C_%253BmwUG-F8FzxEM6M%252CgB4Zx98Dfb06ZM%252C_%253BJiQytbXaRVHlGM%252C0asx8UucVob8QM%252C_%253B5rwjJljxeh3mdM%252C88mbOcmammw6BM%252C_%253BFuP5XgIJl7F7BM%252CfF_tMYQVsFGkKM%252C_%253BKhOKJ_zJjHfRiM%252COTKqFSuVgRE4oM%252C_%253BgolQgNpgFtwftM%252CnnabC-thnm9xcM%252C_%253BT4G3C2SNfbbgsM%252CxQ4nAVBHq94YlM%252C_%253BW2Dnu4hnEbYkCM%252CgB4Zx98Dfb06ZM%252C_%253BICfHzwKgU6W37M%252CuUOyFS4wRk1iKM%252C_%253B02EafryLuS3NuM%252C0asx8UucVob8QM%252C_%253B-zVngxS7MGq5ZM%252COTKqFSuVgRE4oM%252C_%253BobWJYgQlGwo2-M%252CgB4Zx98Dfb06ZM%252C_&usg=AI4_-kSQKs04HJtnIh3OlDF8F1yhtZv54g&sa=X&sqi=2&ved=2ahUKEwihu5iVkf79AhVrO0QIHSOWA_4QjJkEegQIExAC&biw=1398&bih=612&dpr=2" >every vowel modification chart  </a> out there
         will show you, <br />
         that approach is helpful on some vowels and words, but not the whole
         picture. <br />Some vowels need to go forward (not backward) because<br>
-        open resonance is a matter of BALANCING the vowel, or as i call it
+        open resonance is a matter of BALANCING the vowel, or as i call it, 
         <span class="header-pfont">pronounSing!</span>
 
         </h2>
@@ -67,13 +67,21 @@
     </button>
     <div>
       <pre id="output"></pre>
-    </div>
+    </div></div>
     <script>
       const textInput = document.getElementById("textInput");
       const output = document.getElementById("output");
       const replaceBtn = document.getElementById("replaceBtn");
 
       replaceBtn.addEventListener("click", function () {
+        
+        const copperfieldDiv = document.querySelector('.copperfield');
+copperfieldDiv.style.display = 'none';
+ 
+ 
+
+
+
         let text = textInput.value;
         const lines = text.split("\n");
         const modifiedLines = [];
@@ -295,6 +303,7 @@
             "\n";
         }
 
+        
         output.innerHTML =
           "<h3 style='display: inline-block;'>now, get on to</h3>" +
           "<h2 style='display: inline-block; color: blue; margin-left: 10px; font-style: italic;'>pronounSing!</h2><br>" +
