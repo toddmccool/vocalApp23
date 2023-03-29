@@ -41,18 +41,19 @@
 
 .genDiv {
   background-color: rgb(177, 245, 95);
-  max-width: 25%;
+  max-width: 35%;
 }
 
 
 .nglayDiv1 {
   background-color: rgb(244, 151, 214);
-  max-width: 5%;
+  max-width: 7%;
   font-size: 20px;
 }
 .nglayDiv {
   background-color: rgb(244, 151, 214);
-  max-width: 35%;
+  max-width: 48%;
+  
 }
 
       @media only screen and (max-width: 480px) {
@@ -88,6 +89,8 @@
 .nglayDiv {
   display: inline-block;
   flex-direction: column;
+  max-width: 110%;
+  width: 105%;
   
   
 }
@@ -153,6 +156,8 @@ copperfieldDiv.style.display = 'none';
         for (let i = 0; i < lines.length; i++) {
           const modifiedLine = lines[i]
 
+          .replace(/six/g, "zoh-oogs")
+          .replace(/Six/g, "Zoh-oogs")
           .replace(/the/g, "thuh-ayL")
           .replace(/The/g, "thuh-ayL")
            .replace(/wake/g, "woog")
