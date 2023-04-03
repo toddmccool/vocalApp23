@@ -192,8 +192,7 @@ copperfieldDiv.style.display = 'none';
             .replace(/car/g, "coaL")
             .replace(/wash/g, "wongsh")
 
-            .replace(/(a) /g, "uhLay ")
-            .replace(/(A) /g, "uhLay ")
+            .replace(/[Aa] /g, "uhLay ")
             .replace(/though/g, "thuhL")
             .replace(/no/g, "NuhL")
             .replace(/go/g, "GuhL")
@@ -201,10 +200,8 @@ copperfieldDiv.style.display = 'none';
             .replace(/slow/g, "zLuhL")
             .replace(/ow/g, "sLuhL")
             .replace(/I'/g, "oo-OhLng")
-            .replace(/she/g, "shuhl")
-            .replace(/She/g, "Shuhl")
-            .replace(/and/g, "oaLn")
-            .replace(/And/g, "oaLn")
+            .replace(/[Sh]/g, "shuhl")
+            .replace(/[Aa]nd/g, "oaLn")
             .replace(/the/g, "thuhL")
             .replace(/The/g, "ThuhL")
 
@@ -392,17 +389,23 @@ copperfieldDiv.style.display = 'none';
           originalLines.push(lines[i]);
         }
 
+   
+
+
+
         let result = "";
-        for (let i = 0; i < modifiedLines.length; i++) {
-          result +=
-            '<span class="highlight">' +
-            modifiedLines[i] +
-            "</span>" +
-            "\n" +
-            originalLines[i] +
-            "\n" +
-            "\n";
-        }
+for (let i = 0; i < modifiedLines.length; i++) {
+  // Split the modified line into an array of words and join them with a space
+  const modifiedLineWithSpaces = modifiedLines[i].split(" ").join(" ");
+  result +=
+    '<span class="highlight">' +
+    modifiedLineWithSpaces +
+    "</span>" +
+    "\n" +
+    originalLines[i] +
+    "\n" +
+    "\n";
+}
 
         
         output.innerHTML =
