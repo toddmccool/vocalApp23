@@ -45,7 +45,7 @@
           font-size: 14px;
           display: inline-block;
           flex-direction: column;
-          max-width: 100%;
+          max-width: 95%;
         
         }
 
@@ -54,8 +54,13 @@
         pre {
           width: 100%;
           box-sizing: border-box;
-          max-width: 100%;
+          max-width: 95%;
          
+        }
+
+        output-div {
+          width: 50%;
+          max-width: 50%;
         }
 
 
@@ -121,6 +126,9 @@ copperfieldDiv.style.display = 'none';
         
           
 .replace(/om/g, "œւm")
+
+.replace(/[Ii]f/g, "ч૦૦v")
+
 .replace(/ing/g, "ብч૦૦מ")
 .replace(/here/g, "hаyõõ") 
 .replace(/[Ss]he/g, "Shœւ") 
@@ -245,11 +253,12 @@ copperfieldDiv.style.display = 'none';
         }
 
    
-
         let result = "";
 for (let i = 0; i < modifiedLines.length; i++) {
   // Split the modified line into an array of words and join them with a space
    
+
+  
   result +=
     '<span class="highlight">' +
       modifiedLines[i] +
@@ -258,6 +267,7 @@ for (let i = 0; i < modifiedLines.length; i++) {
     originalLines[i] +
     "\n" +
     "\n";
+ 
 }
  
        
@@ -266,7 +276,7 @@ document.documentElement.scrollTop = 0
         output.innerHTML =
           "<h3 style='display: inline-block;'>now, get on to</h3>" +
           "<h2 style='display: inline-block; color: blue; margin-left: 10px; font-style: italic;'>pronounSing!</h2><br>" + 
-          result + "<br>Only Modify the Words that are troublesome to you<br><br><div class='genDiv'><i><span style='background-color: 	rgb(191, 255, 0)'>in general, to find <b>balance</b> in the vowels<br> oo needs to go forward to AY <br> ee becomes ayOO <a href='https://youtu.be/0Gv8XLv2ccU'>or you could try iy </a><br> uh becomes OY  <br> iy goes back & down to <a href='https://youtu.be/Z9MB3H5dO84?t=291'>OLNG</a> <br> oh, eh, & ih, go deeper to <a href='https://youtu.be/Z9MB3H5dO84?t=291'>OLNG</a> <br> ay goes backward to OOO <br> ooo opens up to OH  <br>& everything else becomes OH</i> </span></div> <br><br><br>Finally, when all else fails, <br>try replacing the challenging word with <br><br><div class='nglayDiv1'><span style='background-color: 	rgb(255, 0, 255)'><b>nGLooY</b></span> or <span style='background-color: 	rgb(255, 0, 255)'><b><i>[falsetto vowel]</i>-OOO-OahLwn</div></span><br>then slowly migrate back toward your challenging word, 1 syllable at a time <br><i>notice the shifts that occur in the <br>throat, the tongue, the larynx & the breath support</i><br>modify just enough so it sounds natural but your best resonance is maintained<br>that word works for me, It might work for you as well.<br> <div class='nglayDiv'><span style='background-color: 	rgb(255, 0, 255)'>the <b>NG</b> facilitates pharyngeal resonance, <br>the <b>L</b>  Lowers my Larynx <br>the <b>Ooo</b>  Opens up the word <br>the <b>Y</b>  yields some bright twayng so I don't sound operatic</span></div><br>remember the key is <b>Balance!</b> <h3><br><a href='https://toddmccool.github.io/vocalApp23/'>do it again?</a></h3>";
+          result + "<br>Only Modify the Words that are troublesome to you<br><br><div class='genDiv'><i><span style='background-color: 	rgb(191, 255, 0)'>in general, to find <b>balance</b> in the vowels<br> oo needs to go forward to AY <br> ee becomes ayOO <a href='https://youtu.be/0Gv8XLv2ccU'>or you could try iy </a><br> uh becomes OY  <br> iy goes back & down to <a href='https://youtu.be/Z9MB3H5dO84?t=291'>OLNG</a> <br> oh, eh, & ih, go deeper to <a href='https://youtu.be/Z9MB3H5dO84?t=291'>OLNG</a> <br> ay goes backward to OOO <br> ooo opens up to OH  <br>& everything else becomes OH</i> </span></div> <br><br><br>Finally, when all else fails, <br>try replacing the challenging word with <br><br><div class='nglayDiv1'><span style='background-color: 	rgb(255, 0, 255)'><b>nGLooY</b></span> or <span style='background-color: 	rgb(255, 0, 255)'><b><i>[falsetto vowel]</i>-OOO-OahLwn</div></span><br>then slowly migrate back toward your challenging word, 1 syllable at a time <br><i>notice the shifts that occur in the <br>throat, the tongue, the larynx & the breath support</i><br>modify just enough so it sounds natural but your best resonance is maintained<br>that word works for me, It might work for you as well.<br> <div class='nglayDiv'><span style='background-color: 	rgb(255, 0, 255)'>the <b>NG</b> facilitates pharyngeal resonance, <br>the <b>L</b>  Lowers my Larynx <br>the <b>Ooo</b>  Opens up the word <br>the <b>Y</b>  yields some bright twayng so I don't sound operatic</span></div>Finally, there are times where when you move from heavy head resonance to Chest, the chest notes need to be modified toward Ay to be bright and forward (masky)<br>remember the key is <b>Balance!</b> <h3><br><a href='https://toddmccool.github.io/vocalApp23/'>do it again?</a></h3>";
       });
     </script>
   </body>
