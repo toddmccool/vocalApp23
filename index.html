@@ -63,6 +63,14 @@
           max-width: 50%;
         }
 
+        .resultDiv {
+  max-width: 200px;
+  text-overflow: ellipsis;
+  white-space: normal;
+
+
+}
+
 
 
       }
@@ -227,14 +235,6 @@ copperfieldDiv.style.display = 'none';
 .replace(/[Dd]r/g, "j")
 .replace(/e\b/g, " ")
 .replace(/ohLnаohLooh/g, "hyOH-ooR")
-
-
-
-
-
-
-
-
 .replace(/ւ/g, "L")
 
 .replace(/nDanаwL🅽gаohւ/g, "nDoo-OаwL🅽z")
@@ -271,234 +271,14 @@ for (let i = 0; i < modifiedLines.length; i++) {
 }
  
        
-
-document.documentElement.scrollTop = 0  
-        output.innerHTML =
+output.innerHTML =
           "<h3 style='display: inline-block;'>now, get on to</h3>" +
           "<h2 style='display: inline-block; color: blue; margin-left: 10px; font-style: italic;'>pronounSing!</h2><br>" + 
-          result + "<br>Only Modify the Words that are troublesome to you<br><br><div class='genDiv'><i><span style='background-color: 	rgb(191, 255, 0)'>in general, to find <b>balance</b> in the vowels<br> oo needs to go forward to AY <br> ee becomes ayOO <a href='https://youtu.be/0Gv8XLv2ccU'>or you could try iy </a><br> uh becomes OY  <br> iy goes back & down to <a href='https://youtu.be/Z9MB3H5dO84?t=291'>OLNG</a> <br> oh, eh, & ih, go deeper to <a href='https://youtu.be/Z9MB3H5dO84?t=291'>OLNG</a> <br> ay goes backward to OOO <br> ooo opens up to OH  <br>& everything else becomes OH</i> </span></div> <br><br><br>Finally, when all else fails, <br>try replacing the challenging word with <br><br><div class='nglayDiv1'><span style='background-color: 	rgb(255, 0, 255)'><b>nGLooY</b></span> or <span style='background-color: 	rgb(255, 0, 255)'><b><i>[falsetto vowel]</i>-OOO-OahLwn</div></span><br>then slowly migrate back toward your challenging word, 1 syllable at a time <br><i>notice the shifts that occur in the <br>throat, the tongue, the larynx & the breath support</i><br>modify just enough so it sounds natural but your best resonance is maintained<br>that word works for me, It might work for you as well.<br> <div class='nglayDiv'><span style='background-color: 	rgb(255, 0, 255)'>the <b>NG</b> facilitates pharyngeal resonance, <br>the <b>L</b>  Lowers my Larynx <br>the <b>Ooo</b>  Opens up the word <br>the <b>Y</b>  yields some bright twayng so I don't sound operatic</span></div>Finally, there are times where when you move from heavy head resonance to Chest, the chest notes need to be modified toward Ay to be bright and forward (masky)<br>remember the key is <b>Balance!</b> <h3><br><a href='https://toddmccool.github.io/vocalApp23/'>do it again?</a></h3>";
+          "<div class='resultDiv'>" + result + "</div><br>Only Modify the Words that are troublesome to you<br><br><div class='genDiv'><i><span style='background-color:  rgb(191, 255, 0)'>in general, to find <b>balance</b> in the vowels<br> oo needs to go forward to AY <br> ee becomes ayOO <a href='https://youtu.be/0Gv8XLv2ccU'>or you could try iy </a><br> uh becomes OY  <br> iy goes back & down to <a href='https://youtu.be/Z9MB3H5dO84?t=291'>OLNG</a> <br> oh, eh, & ih, go deeper to <a href='https://youtu.be/Z9MB3H5dO84?t=291'>OLNG</a> <br> ay goes backward to OOO <br> ooo opens up to OH  <br>& everything else becomes OH</i> </span></div> <br><br><br>Finally, when all else fails, <br>try replacing the challenging word with <br><br><div class='nglayDiv1'><span style='background-color:  rgb(255, 0, 255)'><b>nGLooY</b></span> or <span style='background-color:  rgb(255, 0, 255)'><b><i>[falsetto vowel]</i>-OOO-OahLwn</div></span><br>then slowly migrate back toward your challenging word, 1 syllable at a time <br><i>notice the shifts that occur in the <br>throat, the tongue, the larynx & the breath support</i><br>modify just enough so it sounds natural but your best resonance is maintained<br>that word works for me, It might work for you as well.<br> <div class='nglayDiv'><span style='background-color:  rgb(255, 0, 255)'>the <b>NG</b> facilitates pharyngeal resonance, <br>the <b>L</b>  Lowers my Larynx <br>the <b>Ooo</b>  Opens up the word <br>the <b>Y</b>  yields some bright twayng so I don't sound operatic</span></div>Finally, there are times where when you move from heavy head resonance to Chest, the chest notes need to be modified toward Ay to be bright and forward (masky)<br>remember the key is <b>Balance!</b> <h3><br><a href='https://toddmccool.github.io/vocalApp23/'>do it again?</a></h3>";
+
       });
     </script>
   </body>
 </html>
 
 <!--
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>PronounSing</title>
-  </head>
-  <body>
-    <div>
-      <h2>copy/paste <b>original Lyrics </b>here:</h2>
-      <label for="textInput"></label>
-      <textarea id="textInput" rows="20" cols="100"></textarea>
-    </div>
-    <button id="replaceBtn" style="background-color: red; color: white">
-      Modify Lyrics
-    </button>
-    <div>
-      <h2>altered <b>pronounSing!</b>:</h2>
-      <pre id="output"></pre>
-    </div>
-    <script>
-      const textInput = document.getElementById("textInput");
-      const output = document.getElementById("output");
-      const replaceBtn = document.getElementById("replaceBtn");
-
-      replaceBtn.addEventListener("click", function () {
-        let text = textInput.value;
-        const lines = text.split("\n");
-        const modifiedLines = [];
-        const originalLines = [];
-
-        for (let i = 0; i < lines.length; i++) {
-          const modifiedLine = lines[i]
-            .replace(/uhLay/g, "ooh")
-            .replace(/though/g, "thuhL")
-            .replace(/no/g, "NuhL")
-            .replace(/go/g, "GuhL")
-            .replace(/throw/g, "thRuhL")
-            .replace(/slow/g, "zLuhL")
-            .replace(/ow/g, "sLuhL")
-            .replace(/I'/g, "oLng")
-
-            .replace(/you/g, "yOh")
-            .replace(/You/g, "yOh")
-            .replace(/i /g, "oLng")
-            .replace(/I /g, "oLng")
-            .replace(/ell/g, "uhLayLL")
-            .replace(/oo/g, "uhLay")
-            .replace(/in/g, "uhLayN")
-            .replace(/any/g, "yuhLayNuhLayoo")
-            .replace(/ish/g, "uhLayZsh")
-            .replace(/perfect/g, "puhLayrFuhLaykt")
-            .replace(/he/g, "huhLayoo")
-            .replace(/He/g, "huhLayoo")
-            .replace(/cal/g, "goaL")
-            .replace(/Cal/g, "goaL")
-            .replace(/wel/g, "wuhLay")
-            .replace(/Wel/g, "wuhLay")
-            .replace(/ee/g, "uhLay-oo")
-            .replace(/me/g, "MuhLay-oo")
-            .replace(/Me/g, "MuhLay-oo")
-            .replace(/marr/g, "MuhLayR")
-            .replace(/Marr/g, "MuhLayR")
-
-            .replace(/have/g, "hoave")
-            .replace(/year/g, "yuhLayooR")
-            .replace(/here/g, "huhLayOoR")
-            .replace(/yea/g, "yuhLay")
-            .replace(/tom/g, "duhLaym")
-            .replace(/t/g, "d")
-            .replace(/p/g, "b")
-            .replace(/wish/g, "wuhLaysh")
-            .replace(/at/g, "oat")
-            .replace(/future/g, "vyoture")
-            .replace(/f/g, "v")
-            .replace(/ea/g, "uhLayoo")
-            .replace(/ere/g, "uhLayoor")
-            .replace(/such/g, "soyj")
-            .replace(/lovely/g, "LoyLuhLayoo")
-            .replace(/ly/g, "LuhLayoo")
-            .replace(/um/g, "oyM")
-            .replace(/ome/g, "oyM")
-            .replace(/arm/g, "oLng")
-            .replace(/on/g, "olng")
-            .replace(/On/g, "olng")
-            .replace(/dark/g, "DuhLaylngRk")
-            .replace(/om/g, "uhLaylngM")
-            .replace(/high/g, "hOLNg")
-            .replace(/sky/g, "sGoLNg")
-            .replace(/lord/g, "LoLNgrd")
-            .replace(/on't/g, "oLNd")
-            .replace(/j/g, "shCh")
-            .replace(/J/g, "shCh")
-            .replace(/were/g, "wuhLayR")
-            .replace(/workin/g, "wuhLayrgN")
-            .replace(/t/g, "d")
-            .replace(/des/g, "duhLayz")
-            .replace(/Des/g, "duhLayz")
-            .replace(/T/g, "D")
-            .replace(/s/g, "z")
-            .replace(/S/g, "z")
-            .replace(/i/g, "uhLay")
-            .replace(/er/g, "uhLayR")
-            .replace(/uhLay/g, "uhL")
-            .replace(/good/g, "goyd")
-            .replace(/my/g, "muhL")
-            .replace(/My/g, "muhL")
-            .replace(/ca/g, "guh")
-            .replace(/cu/g, "guh")
-            .replace(/Cu/g, "guh")
-            .replace(/dhe/g, "thoy")
-            .replace(/rew/g, "ruhLayw")
-            .replace(/and/g, "oave")
-            .replace(/And/g, "oave")
-            .replace(/uch/g, "oygch")
-            .replace(/lendy/g, "loondoo")
-            .replace(/any/g, "oon-oo")
-            .replace(/p/g, "b")
-            .replace(/P/g, "b")
-            .replace(/ow/g, "uhLayW")
-            .replace(/ow/g, "uhLayW")
-            .replace(/'c/g, "'g")
-            .replace(/'C/g, "'g")
-            .replace(/ove/g, "oLng")
-            .replace(/hezz/g, "huhLayz")
-            .replace(/all/g, "uhL")
-            .replace(/All/g, "uhL")
-            .replace(/baby/g, "boob")
-            .replace(/Baby/g, "boob")
-            .replace(/brzLuhLn/g, "brown")
-            .replace(/HzLuhL/g, "huHL")
-            .replace(/WhuhLoore/g, "wuh-ayL")
-
-            .replace(/dhuhLoo/g, "thuhL")
-            .replace(/ord/g, "oLnd")
-
-            .replace(/NaMuhL/g, "nooM")
-            .replace(/naMuhL/g, "nooM")
-            .replace(/God/g, "Guhld")
-            .replace(/got/g, "Guhld")
-            .replace(/end/g, "aynd")
-            .replace(/End/g, "aynd")
-            .replace(/we/g, "wayoo")
-            .replace(/We/g, "wayoo")
-            .replace(/F/g, "v")
-            .replace(/f/g, "v")
-            .replace(/our/g, "uhL")
-            .replace(/Our/g, "uhL")
-
-            .replace(/col/g, "guhL")
-
-            .replace(/cal/g, "guhL")
-
-            .replace(/Col/g, "guhL")
-
-            .replace(/Cal/g, "guhL");
-
-          modifiedLines.push(modifiedLine);
-          originalLines.push(lines[i]);
-        }
-
-        let result = "";
-        for (let i = 0; i < modifiedLines.length; i++) {
-          result += modifiedLines[i] + "\n" + originalLines[i] + "\n" + "\n";
-        }
-
-        output.textContent = result;
-      });
-    </script>
-  </body>
-</html>
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>new vowel Replacer</title>
-  </head>
-  <body>
-    <textarea id="textInput" rows="30" cols="80"></textarea>
-    <br />
-    <button id="replaceBtn">
-      Replace and view your new and imporoved lyrics below!
-    </button>
-    <br />
-    <br />
-    <textarea id="output" rows="50" cols="80" readonly></textarea>
-    <script src="replace.js"></script>
-  </body>
-</html>
--->
